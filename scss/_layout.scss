@@ -1,36 +1,38 @@
 body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .container {
-  /* width: 39rem;
-  height: 31.25rem; */
   box-shadow: 0 3.75rem 7.5rem -1.875rem rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: .0625rem solid red; */
   position: relative;
   background-color: $white;
 }
 .menu {
   width: 2.625rem;
-  height: 24.625rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
 }
 .form {
   width: 34.875rem;
-  height: 24.625rem;
+  height: 25rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 .social {
   width: 8rem;
-  height: 24.625rem;
+  height: 25rem;
   background-color: $yellow;
 }
 .info {
@@ -39,4 +41,88 @@ body {
   height: 17.625rem;
   background-color: $gray;
   right: 0;
+}
+
+@media screen and (max-width: 860px) {
+  html {
+    font-size: 18px;
+  }
+  body {
+    align-items: flex-start;
+  }
+  .container {
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: $white;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .menu {
+    width: 100%;
+    height: 4.5rem;
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .social {
+    flex-direction: row;
+    height: 6rem;
+    width: 100%;
+    padding: 0 30%;
+
+    .logos {
+      padding: 0 1rem;
+    }
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .info {
+    height: 20rem;
+    top: calc(50% - 10rem);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 18px;
+  }
+  .form {
+    width: 100%;
+    margin: 2rem 0;
+    height: 100%;
+
+    form {
+      width: 100%;
+      margin: 0;
+      padding: 0 4rem;
+
+      input {
+        margin-bottom: 1.25rem;
+      }
+
+      textarea {
+        min-height: 8rem;
+        max-height: 8rem;
+        resize: none;
+      }
+
+      input[type="submit"] {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .info {
+    position: relative;
+    width: 100%;
+    padding: 1.875rem 4rem;
+  }
 }

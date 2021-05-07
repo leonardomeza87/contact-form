@@ -36,13 +36,13 @@ form {
     transform: translateY(1.25rem);
 
     &.selected {
-      transform: translateY(0);
+      transform: translateY(-0.25rem);
       color: $gray;
     }
   }
 
   input {
-    margin-bottom: 1.125rem;
+    margin-bottom: 0.75rem;
   }
 
   input,
@@ -81,7 +81,7 @@ form {
   }
 
   input[type="submit"] {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     background-color: $gray;
     color: $white;
     text-transform: uppercase;
@@ -98,16 +98,22 @@ form {
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  position: relative;
-
   .icon {
     position: absolute;
     top: 1rem;
     width: 70%;
+  }
+
+  @media screen and (max-width: 860px) {
+    .icon {
+      height: 100%;
+      position: relative;
+      left: 1rem;
+      top: 0;
+    }
+    svg {
+      height: 100%;
+    }
   }
 
   .menu-icon {
@@ -157,6 +163,9 @@ form {
       }
     }
   }
+
+  @media screen and (max-width: 860px) {
+  }
 }
 
 .info {
@@ -178,6 +187,13 @@ form {
     height: 1.875rem;
     z-index: 100;
     background-color: $yellow;
+  }
+
+  @media screen and (max-width: 720px) {
+    &::before {
+      top: -0.9375rem;
+      left: 0rem;
+    }
   }
 
   h2 {

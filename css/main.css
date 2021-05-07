@@ -16,13 +16,7 @@ a {
   display: none !important;
 }
 
-@media screen and (min-width: 800px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 860px) {
   html {
     font-size: 18px;
   }
@@ -97,13 +91,13 @@ form label {
 }
 
 form label.selected {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateY(-0.25rem);
+          transform: translateY(-0.25rem);
   color: #1e1e20;
 }
 
 form input {
-  margin-bottom: 1.125rem;
+  margin-bottom: 0.75rem;
 }
 
 form input,
@@ -145,7 +139,7 @@ form textarea::-webkit-scrollbar-thumb {
 }
 
 form input[type="submit"] {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   background-color: #1e1e20;
   color: #fff;
   text-transform: uppercase;
@@ -164,27 +158,22 @@ form input[type="submit"]:hover {
           box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 }
 
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  position: relative;
-}
-
 .menu .icon {
   position: absolute;
   top: 1rem;
   width: 70%;
+}
+
+@media screen and (max-width: 860px) {
+  .menu .icon {
+    height: 100%;
+    position: relative;
+    left: 1rem;
+    top: 0;
+  }
+  .menu svg {
+    height: 100%;
+  }
 }
 
 .menu .menu-icon {
@@ -289,6 +278,13 @@ form input[type="submit"]:hover {
   background-color: #ffdf3c;
 }
 
+@media screen and (max-width: 720px) {
+  .info::before {
+    top: -0.9375rem;
+    left: 0rem;
+  }
+}
+
 .info h2 {
   font-size: 1.25rem;
 }
@@ -385,7 +381,7 @@ form input[type="submit"]:hover {
 
 body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,8 +394,6 @@ body {
 }
 
 .container {
-  /* width: 39rem;
-  height: 31.25rem; */
   -webkit-box-shadow: 0 3.75rem 7.5rem -1.875rem rgba(0, 0, 0, 0.4);
           box-shadow: 0 3.75rem 7.5rem -1.875rem rgba(0, 0, 0, 0.4);
   display: -webkit-box;
@@ -411,19 +405,32 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* border: .0625rem solid red; */
   position: relative;
   background-color: #fff;
 }
 
 .menu {
   width: 2.625rem;
-  height: 24.625rem;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
 }
 
 .form {
   width: 34.875rem;
-  height: 24.625rem;
+  height: 25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,7 +444,7 @@ body {
 
 .social {
   width: 8rem;
-  height: 24.625rem;
+  height: 25rem;
   background-color: #ffdf3c;
 }
 
@@ -447,5 +454,103 @@ body {
   height: 17.625rem;
   background-color: #1e1e20;
   right: 0;
+}
+
+@media screen and (max-width: 860px) {
+  html {
+    font-size: 18px;
+  }
+  body {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .menu {
+    width: 100%;
+    height: 4.5rem;
+    padding: 1rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .social {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 6rem;
+    width: 100%;
+    padding: 0 30%;
+  }
+  .social .logos {
+    padding: 0 1rem;
+  }
+  .form {
+    width: 100%;
+  }
+  .info {
+    height: 20rem;
+    top: calc(50% - 10rem);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 18px;
+  }
+  .form {
+    width: 100%;
+    margin: 2rem 0;
+    height: 100%;
+  }
+  .form form {
+    width: 100%;
+    margin: 0;
+    padding: 0 4rem;
+  }
+  .form form input {
+    margin-bottom: 1.25rem;
+  }
+  .form form textarea {
+    min-height: 8rem;
+    max-height: 8rem;
+    resize: none;
+  }
+  .form form input[type="submit"] {
+    margin-top: 2rem;
+  }
+  .info {
+    position: relative;
+    width: 100%;
+    padding: 1.875rem 4rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
