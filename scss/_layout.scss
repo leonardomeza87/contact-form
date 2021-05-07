@@ -16,7 +16,6 @@ body {
   /* border: .0625rem solid red; */
   position: relative;
   background-color: $white;
-  animation: elevation 1s ease-in-out alternate infinite;
 }
 .menu {
   width: 2.625rem;
@@ -40,13 +39,4 @@ body {
   height: 17.625rem;
   background-color: $gray;
   right: 0;
-}
-
-@keyframes elevation {
-  0% {
-    box-shadow: 0 3.75rem 7.5rem 0rem rgba(0, 0, 0, 0.4);
-  }
-  100% {
-    box-shadow: 0 3.75rem 7.5rem -3.75rem rgba(0, 0, 0, 0.4);
-  }
 }

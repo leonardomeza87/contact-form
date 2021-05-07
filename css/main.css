@@ -115,7 +115,6 @@ form textarea {
   border-bottom: 0.0625rem solid #ddd;
   background-color: transparent;
   padding: 0.375rem;
-  resize: none;
 }
 
 form input:active, form input:focus,
@@ -125,8 +124,28 @@ form textarea:focus {
   outline: none;
 }
 
+form textarea {
+  resize: vertical;
+  min-height: 2rem;
+  max-height: 4.1rem;
+  scrollbar-width: thin;
+}
+
+form textarea::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+form textarea::-webkit-scrollbar-track {
+  background: #e6e6e6;
+}
+
+form textarea::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border: 0.0625rem solid transparent;
+}
+
 form input[type="submit"] {
-  margin-top: 2rem;
+  margin-top: 1rem;
   background-color: #1e1e20;
   color: #fff;
   text-transform: uppercase;
@@ -395,8 +414,6 @@ body {
   /* border: .0625rem solid red; */
   position: relative;
   background-color: #fff;
-  -webkit-animation: elevation 1s ease-in-out alternate infinite;
-          animation: elevation 1s ease-in-out alternate infinite;
 }
 
 .menu {
@@ -430,27 +447,5 @@ body {
   height: 17.625rem;
   background-color: #1e1e20;
   right: 0;
-}
-
-@-webkit-keyframes elevation {
-  0% {
-    -webkit-box-shadow: 0 3.75rem 7.5rem 0rem rgba(0, 0, 0, 0.4);
-            box-shadow: 0 3.75rem 7.5rem 0rem rgba(0, 0, 0, 0.4);
-  }
-  100% {
-    -webkit-box-shadow: 0 3.75rem 7.5rem -3.75rem rgba(0, 0, 0, 0.4);
-            box-shadow: 0 3.75rem 7.5rem -3.75rem rgba(0, 0, 0, 0.4);
-  }
-}
-
-@keyframes elevation {
-  0% {
-    -webkit-box-shadow: 0 3.75rem 7.5rem 0rem rgba(0, 0, 0, 0.4);
-            box-shadow: 0 3.75rem 7.5rem 0rem rgba(0, 0, 0, 0.4);
-  }
-  100% {
-    -webkit-box-shadow: 0 3.75rem 7.5rem -3.75rem rgba(0, 0, 0, 0.4);
-            box-shadow: 0 3.75rem 7.5rem -3.75rem rgba(0, 0, 0, 0.4);
-  }
 }
 /*# sourceMappingURL=main.css.map */

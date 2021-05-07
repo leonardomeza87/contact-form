@@ -2,8 +2,6 @@ const d = document,
   $inputs = d.querySelectorAll(".input"),
   $labels = d.querySelectorAll("label");
 
-console.log($inputs);
-
 for (let i = 0; i < $inputs.length; i++) {
   if ($inputs[i].value) {
     $labels[i].classList.add("selected");
@@ -50,7 +48,6 @@ d.addEventListener("submit", (e) => {
       response.ok ? response.json() : Promise.reject(response)
     )
     .then((json) => {
-      console.log(json);
       $loader.classList.add("none");
       $response.innerHTML = `<p>${json.message}</p>`;
       $form.reset();

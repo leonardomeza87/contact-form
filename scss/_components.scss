@@ -54,7 +54,6 @@ form {
     border-bottom: 0.0625rem solid $border;
     background-color: transparent;
     padding: 0.375rem;
-    resize: none;
 
     &:active,
     &:focus {
@@ -63,8 +62,26 @@ form {
     }
   }
 
+  textarea {
+    resize: vertical;
+    min-height: 2rem;
+    max-height: 4.1rem;
+    scrollbar-width: thin;
+  }
+
+  textarea::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+  textarea::-webkit-scrollbar-track {
+    background: rgb(230, 230, 230);
+  }
+  textarea::-webkit-scrollbar-thumb {
+    background: rgb(194, 194, 194);
+    border: 0.0625rem solid transparent;
+  }
+
   input[type="submit"] {
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-color: $gray;
     color: $white;
     text-transform: uppercase;
