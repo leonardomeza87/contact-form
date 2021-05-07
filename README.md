@@ -13,5 +13,8 @@ Fully operational with the help of [https://formsubmit.co/](https://formsubmit.c
 Change the endpoint in the fetch request line for your email or formsubmit phrase:
 
 ```javascript
-"https://formsubmit.co/ajax/your@email" {
+fetch("https://formsubmit.co/ajax/your@email", {
+  ...
+});
+
 ```
