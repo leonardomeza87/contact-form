@@ -359,8 +359,9 @@ form input[type="submit"]:hover {
 }
 
 .pop .response {
-  font-size: 14px;
+  font-size: 1rem;
   color: #1e1e20;
+  letter-spacing: 1px;
 }
 
 body {
