@@ -68,6 +68,10 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    .menu-icon {
+      width: 40%;
+    }
   }
   .social {
     flex-direction: row;
@@ -134,5 +138,13 @@ body {
     position: relative;
     width: 100%;
     padding: 1.875rem 4rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .form {
+    form {
+      padding: 0 2rem;
+    }
   }
 }

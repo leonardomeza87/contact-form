@@ -178,6 +178,7 @@ form input[type="submit"]:hover {
 
 .menu .menu-icon {
   height: 2.5rem;
+  width: 100%;
   background-color: #ffdf3c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,6 +503,9 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .menu .menu-icon {
+    width: 40%;
+  }
   .social {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -560,6 +564,12 @@ body {
     position: relative;
     width: 100%;
     padding: 1.875rem 4rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .form form {
+    padding: 0 2rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
