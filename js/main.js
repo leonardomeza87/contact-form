@@ -42,7 +42,7 @@ d.addEventListener("submit", (e) => {
 
   $pop.classList.remove("none");
 
-  fetch("https://formsubmit.co/ajax/leonardomeza227@gmail.com", {
+  fetch("https://formsubmit.co/ajax/ff35e216e825c9779192ce43f80cd701", {
     method: "POST",
     body: new FormData(e.target),
   })
