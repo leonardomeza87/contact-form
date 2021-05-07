@@ -1,39 +1,39 @@
 form {
-  width: 246px;
+  width: 15.375rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-left: 64px;
+  align-items: flex-start;
+  margin-left: 4rem;
   text-align: left;
   cursor: default;
 
   h1 {
-    font-size: 38px;
+    font-size: 2.375rem;
     font-weight: 700;
     width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 1.125rem;
   }
 
   p,
   label {
     color: $light-gray;
-    letter-spacing: 1px;
-    font-size: 10px;
+    letter-spacing: 0.0625rem;
+    font-size: 0.625rem;
     font-weight: 500;
-    width: 100%;
   }
 
   p {
-    margin-bottom: 18px;
+    width: 100%;
+    margin-bottom: 1.125rem;
   }
 
   label {
-    font-size: 9px;
+    font-size: 0.5625rem;
     font-weight: 500;
-    margin-left: 14px;
-    transition: all 0.5s ease-in-out;
-    transform: translateY(20px);
+    margin-left: 0.875rem;
+    transition: all 0.1s ease-in-out;
+    transform: translateY(1.25rem);
 
     &.selected {
       transform: translateY(0);
@@ -42,35 +42,41 @@ form {
   }
 
   input {
-    margin-bottom: 18px;
+    margin-bottom: 1.125rem;
   }
 
   input,
   textarea {
     width: 100%;
-    height: 30px;
-    font-size: 12px;
+    height: 1.875rem;
+    font-size: 0.75rem;
     border: none;
-    border-bottom: 1px solid $border;
+    border-bottom: 0.0625rem solid $border;
     background-color: transparent;
-    padding: 6px;
+    padding: 0.375rem;
     resize: none;
 
     &:active,
     &:focus {
-      border-bottom: 1px solid $light-gray;
+      border-bottom: 0.0625rem solid $light-gray;
       outline: none;
     }
   }
 
   input[type="submit"] {
-    margin-top: 32px;
+    margin-top: 2rem;
     background-color: $gray;
     color: $white;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 8px;
+    letter-spacing: 0.125rem;
+    font-size: 0.5rem;
     cursor: pointer;
+    border-bottom: none;
+    transition: box-shadow 0.1s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+    }
   }
 }
 
@@ -83,20 +89,25 @@ form {
 
   .icon {
     position: absolute;
-    top: 16px;
+    top: 1rem;
     width: 70%;
   }
 
   .menu-icon {
-    height: 40px;
+    height: 2.5rem;
     background-color: $yellow;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: color 0.1s ease-in-out;
 
     svg {
       width: 60%;
+    }
+
+    &:hover {
+      color: $white;
     }
   }
 }
@@ -115,12 +126,17 @@ form {
     padding: 16%;
 
     .icon {
-      height: 16px;
-      width: 16px;
+      height: 1rem;
+      width: 1rem;
       text-align: center;
 
       svg {
         height: 100%;
+        transition: fill 0.1s ease-in-out;
+      }
+
+      &:hover svg {
+        fill: $white;
       }
     }
   }
@@ -132,23 +148,23 @@ form {
   justify-content: space-between;
   align-items: flex-start;
   color: $white;
-  padding: 30px;
+  padding: 1.875rem;
   cursor: default;
   position: relative;
 
   &::before {
     position: absolute;
     content: "";
-    top: -15px;
-    left: -15px;
-    width: 30px;
-    height: 30px;
+    top: -0.9375rem;
+    left: -0.9375rem;
+    width: 1.875rem;
+    height: 1.875rem;
     z-index: 100;
     background-color: $yellow;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .info-item {
@@ -156,16 +172,58 @@ form {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-size: 12px;
+    font-size: 0.75rem;
 
     .icon {
-      width: 24px;
+      width: 1.5rem;
+    }
+
+    #circles-1,
+    #circles-2,
+    #circles-3 {
+      fill: $white;
     }
 
     a,
     p {
-      padding: 10px;
+      padding: 0.625rem;
       width: 100%;
     }
+  }
+}
+
+.pop {
+  position: absolute;
+  width: 80%;
+  height: 60%;
+  background-color: $white;
+  border: 6px solid $yellow;
+  z-index: 999999999999999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 6px solid $gray;
+    border-radius: 50% 50% 50% 0;
+    animation: rotate 1s linear infinite;
+    margin-bottom: 24px;
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .response {
+    font-size: 14px;
+    color: $gray;
   }
 }
