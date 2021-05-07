@@ -88,6 +88,16 @@ body {
     height: 20rem;
     top: calc(50% - 10rem);
   }
+
+  .pop {
+    width: 80%;
+    height: 50vh;
+    top: 25vh;
+
+    .response {
+      padding: 1.5rem;
+    }
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -124,15 +134,5 @@ body {
     position: relative;
     width: 100%;
     padding: 1.875rem 4rem;
-  }
-
-  .pop {
-    width: 80%;
-    height: 50vh;
-    top: 25vh;
-
-    .response {
-      padding: 1.5rem;
-    }
   }
 }
