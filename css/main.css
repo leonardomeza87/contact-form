@@ -40,6 +40,20 @@ a {
   }
 }
 
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 form {
   width: 15.375rem;
   display: -webkit-box;
@@ -379,20 +393,6 @@ form input[type="submit"]:hover {
   color: #1e1e20;
   letter-spacing: 1px;
   text-align: center;
-}
-
-body {
-  width: 100%;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .container {
