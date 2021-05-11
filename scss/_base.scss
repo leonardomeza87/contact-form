@@ -6,9 +6,9 @@ $gray: #1e1e20;
 $yellow: #ffdf3c;
 $white: #fff;
 
-//Mixin
+//Extend
 
-@mixin center {
+.center {
   display: flex;
   justify-content: center;
   align-items: center;

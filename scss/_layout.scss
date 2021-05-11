@@ -1,7 +1,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  @include center;
+  @extend .center;
 }
 
 form {
@@ -126,7 +126,7 @@ form {
     height: 2.5rem;
     width: 100%;
     background-color: $yellow;
-    @include center;
+    @extend .center;
     cursor: pointer;
     transition: color 0.1s ease-in-out;
 
@@ -171,6 +171,11 @@ form {
 
   @media screen and (max-width: 860px) {
   }
+}
+
+body .first-page .intro .intro-text button:hover {
+  background-color: #52b788;
+  cursor: pointer;
 }
 
 .info {
@@ -270,7 +275,7 @@ form {
 
 .container {
   box-shadow: 0 3.75rem 7.5rem -1.875rem rgba(0, 0, 0, 0.4);
-  @include center;
+  @extend .center;
   position: relative;
   background-color: $white;
 }
