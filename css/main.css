@@ -1,3 +1,15 @@
+.center, body, .menu .menu-icon, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -43,15 +55,6 @@ a {
 body {
   width: 100%;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 form {
@@ -194,15 +197,6 @@ form input[type="submit"]:hover {
   height: 2.5rem;
   width: 100%;
   background-color: #ffdf3c;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   cursor: pointer;
   -webkit-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out;
@@ -260,6 +254,11 @@ form input[type="submit"]:hover {
 
 .social .logos .icon:hover svg {
   fill: #fff;
+}
+
+body .first-page .intro .intro-text button:hover {
+  background-color: #52b788;
+  cursor: pointer;
 }
 
 .info {
@@ -398,15 +397,6 @@ form input[type="submit"]:hover {
 .container {
   -webkit-box-shadow: 0 3.75rem 7.5rem -1.875rem rgba(0, 0, 0, 0.4);
           box-shadow: 0 3.75rem 7.5rem -1.875rem rgba(0, 0, 0, 0.4);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
   background-color: #fff;
 }
