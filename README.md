@@ -1,4 +1,4 @@
-### Contact Form
+# Contact Form
 
 "Small" piece of page that represents a contact section.
 

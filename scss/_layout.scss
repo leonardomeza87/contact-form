@@ -31,7 +31,7 @@ form {
 
   p {
     width: 100%;
-    margin-bottom: 1.125rem;
+    margin-bottom: 1rem;
   }
 
   label {
@@ -127,7 +127,6 @@ form {
     width: 100%;
     background-color: $yellow;
     @extend .center;
-    cursor: pointer;
     transition: color 0.1s ease-in-out;
 
     svg {
@@ -149,9 +148,10 @@ form {
   .logos {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 16%;
+    gap: 1.5rem;
 
     .icon {
       height: 1rem;
@@ -181,7 +181,7 @@ body .first-page .intro .intro-text button:hover {
 .info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   color: $white;
   padding: 1.875rem;
@@ -208,6 +208,7 @@ body .first-page .intro .intro-text button:hover {
 
   h2 {
     font-size: 1.25rem;
+    margin-bottom: 2rem;
   }
 
   .info-item {
@@ -216,9 +217,14 @@ body .first-page .intro .intro-text button:hover {
     justify-content: flex-start;
     align-items: center;
     font-size: 0.75rem;
+    margin-bottom: 1rem;
 
     .icon {
       width: 1.5rem;
+
+      svg path {
+        fill: #fff;
+      }
     }
 
     #circles-1,
